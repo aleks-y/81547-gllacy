@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Алексей Устинов](https://htmlacademy.ru/profile/id81547).
-* Наставник: `Неизвестно`.
+* Наставник: [Марина Сулим](https://htmlacademy.ru/profile/marina_borisova).
 
 ---
 
