@@ -1,14 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  background-color: #849d8f;
-}
-
 body {
   max-width: 1200px;
   min-width: 900px;
   margin: 0 auto;
+
+  background-color: #849d8f;
 }
