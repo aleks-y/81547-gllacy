@@ -5,3 +5,12 @@ body {
 
   background-color: #849d8f;
 }
+
+.search-form,
+.login-form,
+.cart-form,
+.feedback-form,
+.slide-2,
+.slide-3 {
+  display: none;
+}
