@@ -1,13 +1,12 @@
-* {
+body,
+h1,
+h2,
+p {
   padding: 0;
   margin: 0;
 }
 
 body {
-  max-width: 1200px;
-  min-width: 900px;
-  margin: 0 auto;
-
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
@@ -18,6 +17,8 @@ body {
 }
 
 h1 {
+  padding: 8px 0 33px;
+
   font-style: normal;
   font-size: 35px;
   line-height: 30px;
@@ -37,10 +38,21 @@ h2 {
   display: none;
 }
 
+.container {
+  width: 95.4%;
+  padding: 0 2.3%;
+}
+
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
+}
+
+.site-wrapper {
+  max-width: 1200px;
+  min-width: 900px;
+  margin: 0 auto;
 }
 
 .main-header {
@@ -67,23 +79,24 @@ h2 {
   font-size: 0;
 }
 
-.menu-l1 li {
+.menu-level-1 li {
   display: inline-block;
 
   font-size: 16px;
   line-height: 32px;
+  vertical-align: middle;
 }
 
-.menu-l1 li a {
+.menu-level-1 li a {
   display: block;
   padding: 0 14px;
 }
 
-.menu-l2 {
+.menu-level-2 {
   display: none;
 }
 
-.header-right {
+.header-buttons {
   float: right;
   width: 263px;
   padding-top: 23px;
@@ -122,7 +135,7 @@ h2 {
 
 .contact-info {
   float: right;
-  margin-top: 20px;
+  margin-top: 0px;
 
   text-align: right;
   font-size: 16px;
@@ -131,6 +144,22 @@ h2 {
 .contact-info span {
   font-size: 22px;
   font-weight: bold;
+}
+
+.breadcrumbs {
+  float: left;
+  height: 14px;
+  margin-top: 28px;
+
+  font-size: 0;
+}
+
+.breadcrumbs a,
+.breadcrumbs span{
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .slider {
@@ -143,16 +172,16 @@ h2 {
 }
 
 .content {
-  width: 95.4%;
+  width: 100%;
   min-height: 229px;
-  margin: 0 2.3% 40px;
+  margin-bottom: 40px;
 
   background-color: yellow;
 }
 
 .content-item {
   float: left;
-  width: 48.9%;
+  width: 46.6%;
   min-height: 229px;
   padding: 20px;
   box-sizing: border-box;
@@ -161,14 +190,14 @@ h2 {
 }
 
 .content-left {
-  /*margin-left: 2.3%;*/
+  margin-left: 2.3%;
   margin-right: 2.2%;
 }
-/*
+
 .content-right {
   margin-right: 2.3%;
 }
-*/
+
 .hits {
   margin-bottom: 35px;
 
@@ -211,7 +240,7 @@ h2 {
 
 .feature-item {
   float: left;
-  width: 48.9%;
+  width: 48.865%;
   padding-left: 57px;
   padding-top: 15px;
   margin-top: 10px;
@@ -224,12 +253,52 @@ h2 {
 }
 
 .feature-item:nth-child(even) {
+  margin-right: 2.27%;
+}
+
+.catalog-filter {
+  margin-bottom: 40px;
+
+  font-size: 0
+}
+
+.filter-control {
+  display: inline-block;
+  margin-right: 15px;
+
+  font-size: 16px;
+}
+
+.catalog-item {
+  float: left;
+  width: 22.2%;
+  min-height: 330px;
   margin-right: 2.2%;
+  margin-bottom: 40px;
+
+  background-color: red;
+}
+
+.catalog-item:nth-child(4n-3) {
+  margin-left: 2.3%;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 2.3%;
+}
+
+.catalog-item img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-item {
+  display: none;
 }
 
 .map {
   width: 100%;
-  height: 429px;
+  min-height: 429px;
 
   background-color: green;
 }
@@ -245,12 +314,42 @@ h2 {
   background-color: red;
 }
 
+.catalog-paginator {
+  float: right;
+  margin: 40px 0 30px;
+
+  font-size: 0;
+}
+
+.catalog-paginator a {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: black;
+}
+
+.catalog-paginator a:not(:last-child) {
+  margin-right: 2px;
+}
+
 .main-footer {
   width: 95.4%;
   min-height: 103px;
   margin: 0 2.3%;
 
   background-color: yellow;
+}
+
+.footer-col {
+  float: left;
+  width: 50%;
+  min-height: 103px;
 }
 
 .social {
@@ -260,26 +359,52 @@ h2 {
   font-size: 0;
 }
 
-.social li {
+.social a{
   display: inline-block;
-
-  vertical-align: middle;
-}
-
-.social li a {
-  display: block;
   width: 29px;
   height: 29px;
   border: 4px solid white;
+
+  vertical-align: middle;
+
+  border-radius: 50%;
 }
 
-.social li:not(:last-child) {
+.social a:not(:last-child) {
   margin-right: 10px;
 }
 
-.links {
+.links-col {
+  margin-top: 37px;
+  min-height: 36px;
+  padding-left: 22px;
+  margin-right: 10px;
+
+  font-size: 0;
+}
+
+.links-col a {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 5px;
+
+  font-size: 13px;
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 13px;
+}
+
+.link-favorite {
+  font-weight: bold;
+}
+
+.links-col-left {
+  float: right;
+  width: 110px;
+}
+
+.links-col-right {
   float: left;
-  width: 300px;
+  width: 185px;
 }
 
 .copyright {
@@ -289,6 +414,7 @@ h2 {
   margin-top: 20px;
 
   font-size: 12px;
+  text-align: right;
 }
 
 .copyright img {
