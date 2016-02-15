@@ -595,6 +595,7 @@ h2 {
   top: 0;
   left: 0;
 
+  display: block;
   width: 61px;
   height: 61px;
 
@@ -610,7 +611,7 @@ h2 {
   top: 80%;
   left: 0;
 
-  display: inline-block;
+  display: block;
 
   font-size: 30px;
   font-weight: 700;
@@ -620,18 +621,23 @@ h2 {
 }
 
 .price {
+  display: inline-block;
+  vertical-align: bottom;
+
   font-size: 45px;
 }
 
 .price::after {
   content: "";
 
+  display: inline-block;
   width: 31px;
   height: 36px;
+  vertical-align: bottom;
 
   background-image: url("../img/icon-curency-ru.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
 }
 
 .item-img img {
@@ -781,7 +787,7 @@ h2 {
   bottom: 35px;
   left: 21px;
 
-  width: 100%-182px;
+  width: calc(100% - 182px);
   height: 44px;
 
   box-sizing: border-box;
