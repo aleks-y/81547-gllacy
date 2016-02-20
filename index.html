@@ -62,12 +62,14 @@
                   <form action="#" method="post">
                     <input type="email" placeholder="Электронная почта" name="login-email" required >
                     <input type="password" placeholder="Пароль" name="login-password" required>
-                    <button type="submit">
+                    <button type="submit" class="btn-normal">
                       Войти
                     </button>
                   </form>
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                  <div class="login-form-links">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
                 </div>
               </div>
               <div class="header-btn cart-btn">
@@ -76,45 +78,53 @@
                 </a>
                 <div class="pop-up-form cart-form">
                   <div class="cart-table">
-                    <div class="cart-row">
-                      <div class="cart-cell">
+                    <ul class="cart-row">
+                      <li class="cart-cell-1">
                         <button class="item-del"></button>
-                      </div>
-                      <div class="cart-cell">
-                        <img src="" width="33" height="33" alt="">
-                      </div>
-                      <div class="cart-cell">
+                      </li>
+                      <li class="cart-cell-2">
+                        <img src="img/1-small.png" width="33" height="33" alt="Иконка мороженого">
+                      </li>
+                      <li class="cart-cell-3">
                         Пломбир с апельсиновым джемом
-                      </div>
-                      <div class="cart-cell">
-                        <span class="cart-item-weight">1,5кг</span>x&nbsp;200&nbsp;руб.
-                      </div>
-                      <div class="cart-cell">
+                      </li>
+                      <li class="cart-cell-4">
+                        1,5&nbsp;кг&nbsp;
+                        <span class="cart-item-weight">
+                          x&nbsp;200&nbsp;руб.
+                        </span>
+                      </li>
+                      <li class="cart-cell-5">
                         300&nbsp;руб.
-                      </div>
-                    </div>
-                    <div class="cart-row">
-                      <div class="cart-cell">
+                      </li>
+                    </ul>
+                    <ul class="cart-row">
+                      <li class="cart-cell-1">
                         <button class="item-del"></button>
-                      </div>
-                      <div class="cart-cell">
-                        <img src="" width="33" height="33" alt="">
-                      </div>
-                      <div class="cart-cell">
+                      </li>
+                      <li class="cart-cell-2">
+                        <img src="img/2-small.png" width="33" height="33" alt="Иконка мороженого">
+                      </li>
+                      <li class="cart-cell-3">
                         Клубничный пломбир с присыпкой из белого шоколада
-                      </div>
-                      <div class="cart-cell">
-                        <span class="cart-item-weight">1,5&nbsp;кг</span> x&nbsp;300&nbsp;руб.
-                      </div>
-                      <div class="cart-cell">
-                        300&nbsp;руб.
-                      </div>
-                    </div>
+                      </li>
+                      <li class="cart-cell-4">
+                        1,5&nbsp;кг&nbsp;
+                        <span class="cart-item-weight">
+                          x&nbsp;300&nbsp;руб.
+                        </span>
+                      </li>
+                      <li class="cart-cell-5">
+                        450&nbsp;руб.
+                      </li>
+                    </ul>
                   </div>
-                  <span class="cart-total">Итого: 750&nbsp;руб.</span>
-                  <button class="btn-normal">
-                    Оформить заказ
-                  </button>
+                  <div class="cart-total clearfix">
+                    <p>Итого: 750&nbsp;руб.</p>
+                    <button class="btn-normal">
+                      Оформить заказ
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -165,12 +175,12 @@
             <section class="content-item content-left promo">
               <h2>Малинка даром!</h2>
               <p>При покупке 2&nbsp;кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <a href="#" class="btn-normal">Хочу варенье!</a>
+              <a href="#" class="btn-normal btn-promo">Хочу варенье!</a>
             </section>
             <section class="content-item content-right promo">
               <h2>Шолокладки даром!</h2>
               <p>При покупке 2&nbsp;кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <a href="#" class="btn-normal">Хочу шоколадки!</a>
+              <a href="#" class="btn-normal btn-promo">Хочу шоколадки!</a>
             </section>
           </div>
           <div class="hits clearfix">
@@ -182,12 +192,12 @@
                 <figure class="item-img">
                   <img width="267" height="267" src="img/item-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                   <div class="item-price">
-                    <span class="price-number">310</span>
-                    <span class="price-currency"></span>
-                    <span class="price-unit">/кг</span>
+                    <span class="price-number">310</span>/кг
                   </div>
                 </figure>
-                <a href="#" class="item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                <div class="item-name">
+                  <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                </div>
               </div>
               <div class="catalog-item hits-item">
                 <div class="item-hover">
@@ -196,12 +206,12 @@
                 <figure class="item-img">
                   <img width="267" height="267" src="img/item-2.png" alt="Сливочн-кофейное с кусочками шоколада">
                   <div class="item-price">
-                    <span class="price-number">380</span>
-                    <span class="price-currency"></span>
-                    <span class="price-unit">/кг</span>
+                    <span class="price-number">380</span>/кг
                   </div>
                 </figure>
-                <a href="#" class="item-name">Сливочн-кофейное с кусочками шоколада</a>
+                <div class="item-name">
+                  <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+                </div>
               </div>
               <div class="catalog-item hits-item">
                 <div class="item-hover">
@@ -210,12 +220,12 @@
                 <figure class="item-img">
                   <img width="267" height="267" src="img/item-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                   <div class="item-price">
-                    <span class="price-number">355</span>
-                    <span class="price-currency"></span>
-                    <span class="price-unit">/кг</span>
+                    <span class="price-number">355</span>/кг
                   </div>
                 </figure>
-                <a href="#" class="item-name">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <div class="item-name">
+                  <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                </div>
               </div>
               <div class="catalog-item hits-item">
                 <div class="item-hover">
@@ -224,12 +234,12 @@
                 <figure class="item-img">
                   <img width="267" height="267" src="img/item-4.png" alt="Сливочное крем-брюле с карамельной подливкой">
                   <div class="item-price">
-                    <span class="price-number">415</span>
-                    <span class="price-currency"></span>
-                    <span class="price-unit">/кг</span>
+                    <span class="price-number">415</span>/кг
                   </div>
                 </figure>
-                <a href="#" class="item-name">Сливочное крем-брюле с карамельной подливкой</a>
+                <div class="item-name">
+                  <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                </div>
               </div>
             </div>
           </div>
@@ -278,15 +288,7 @@
               <span class="contact-mode">
                 (с 10 до 20 ежедневно)
               </span>
-              <a href="#" class="btn-normal">Форма обратной связи</a>
-              <div class="feedback-form">
-                <p>Мы обязательно вам ответим!</p>
-                <form action="#" method="post">
-                  <input type="text" placeholder="Как вас зовут?" name="feedback-name">
-                  <input type="email" placeholder="Ваша почта для ответа?" name="feedback-email">
-                  <input type="text" placeholder="Напишите что-нибудь..." name="feedback-text">
-                  <button type="submit" class="btn-normal">Отправить</button>
-                </form>
+              <a href="#" class="btn-normal btn-feedback">Форма обратной связи</a>
               </div>
             </address>
           </div>
@@ -319,5 +321,14 @@
         </footer>
       </div>
     </div>
+    <div class="pop-up-form feedback-form">
+      <button class="btn-close"></button>
+      <p>Мы обязательно вам ответим!</p>
+      <form action="#" method="post">
+        <input type="text" placeholder="Как вас зовут?" name="feedback-name" class="feedback-name">
+        <input type="email" placeholder="Ваша почта для ответа?" name="feedback-email" class="feedback-email">
+        <textarea name="feedback-text" class="feedback-text">Напишите что-нибудь...</textarea>
+        <button type="submit" class="btn-normal">Отправить</button>
+      </form>
   </body>
 </html>
