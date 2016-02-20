@@ -1686,7 +1686,7 @@ textarea:focus {
   z-index: 50;
   bottom: 0;
 
-  display: block;
+  display: none;
   width: 430px;
   min-height: 400px;
   padding: 21px 24px;
@@ -1695,8 +1695,8 @@ textarea:focus {
   background-color: #f7f7f4;
 }
 
-.feedback-form-close {
-  display: none;
+.feedback-form-show {
+  display: block;
 }
 
 .feedback-form p {
