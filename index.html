@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize-min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
   <body>
     <input type="radio" id="btn-1" name="toggle" checked>
@@ -49,13 +49,14 @@
               </ul>
             </nav>
             <div class="header-buttons">
-              <div class="header-btn search-btn">
+              <div class="header-btn">
+                <a href="#" class="search-btn"></a>
                 <div class="pop-up-form search-form">
                   <input type="search" placeholder="Что ищем?" name="search-query">
                 </div>
               </div>
-              <div class="header-btn login-btn">
-                <a href="#">
+              <div class="header-btn">
+                <a href="#" class="login-btn">
                   Вход
                 </a>
                 <div class="pop-up-form login-form">
@@ -72,8 +73,8 @@
                   </div>
                 </div>
               </div>
-              <div class="header-btn cart-btn">
-                <a href="#">
+              <div class="header-btn">
+                <a href="#" class="cart-btn">
                   Пусто
                 </a>
                 <div class="pop-up-form cart-form">
@@ -320,15 +321,18 @@
         </footer>
       </div>
     </div>
-    <div class="pop-up-form feedback-form">
-      <button class="btn-close"></button>
-      <p>Мы обязательно вам ответим!</p>
-      <form action="#" method="post">
-        <input type="text" placeholder="Как вас зовут?" name="feedback-name" class="feedback-name">
-        <input type="email" placeholder="Ваша почта для ответа?" name="feedback-email" class="feedback-email">
-        <textarea name="feedback-text" class="feedback-text">Напишите что-нибудь...</textarea>
-        <button type="submit" class="btn-normal">Отправить</button>
-      </form>
+    <div class="overlay">
+      <div class="feedback-form feedback-form-show">
+        <button class="btn-feedback-close"></button>
+        <p>Мы обязательно вам ответим!</p>
+        <form action="#" method="post">
+          <input type="text" placeholder="Как вас зовут?" name="feedback-name" class="feedback-name">
+          <input type="email" placeholder="Ваша почта для ответа?" name="feedback-email" class="feedback-email">
+          <textarea name="feedback-text" placeholder="Напишите что-нибудь..." class="feedback-text"></textarea>
+          <button type="submit" class="btn-normal">Отправить</button>
+        </form>
     </div>
+    </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
