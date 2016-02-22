@@ -577,7 +577,8 @@ textarea:focus {
 .search-form {
   display: none;
   width: 242px;
-  height: 39px;
+  min-height: 39px;
+
 }
 
 .search-form input {
@@ -1227,12 +1228,16 @@ textarea:focus {
 
 .filter-control {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 12px;
   box-sizing: border-box;
 
   vertical-align: bottom;
 
   font-size: 16px;
+}
+
+.filter-control:last-child {
+  margin-right: 0;
 }
 
 .filter-control p {
@@ -1245,9 +1250,9 @@ textarea:focus {
 }
 
 .filter-sorting select {
-  width: 193px;
+  width: 191px;
   height: 36px;
-  padding: 0 15px;
+  padding: 0 14px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1271,7 +1276,7 @@ textarea:focus {
 .price-control {
   position: relative;
 
-  width: 219px;
+  width: 218px;
   height: 36px;
 
   border-radius: 18px;
@@ -1294,9 +1299,9 @@ textarea:focus {
 .price-scale {
   position: absolute;
   top: 16px;
-  left: 15px;
+  left: 14px;
 
-  width: 188px;
+  width: 186px;
   height: 4px;
 
   background-color: rgba(247, 247, 244, 0.5);
@@ -1321,10 +1326,14 @@ textarea:focus {
   left: 133px;
 }
 
+.filter-fat-content {
+  margin-right: 0;
+}
+
 .input-fieldset {
-  min-width: 385px;
+  min-width: 370px;
   height: 36px;
-  padding: 0 15px;
+  padding: 0 14px;
 
   border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1339,7 +1348,7 @@ textarea:focus {
   position: relative;
 
   display: inline-block;
-  padding-left: 30px;
+  padding-left: 25px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1348,7 +1357,7 @@ textarea:focus {
 }
 
 .input-fieldset label:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 13px;
 }
 
 .input-fieldset label:before {
@@ -1435,8 +1444,9 @@ textarea:focus {
 }
 
 .catalog-filter button[type="submit"] {
-  width: 179px;
+  width: 175px;
   height: 36px;
+  margin-right: 0;
   box-sizing: border-box;
 
   color: #ffffff;
