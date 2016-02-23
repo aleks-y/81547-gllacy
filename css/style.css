@@ -13,6 +13,8 @@ button {
 }
 
 body {
+  position: relative;
+
   min-width: 880px;
   min-height: 1000px;
 
@@ -30,7 +32,7 @@ body > input[type="radio"] {
 }
 
 h1 {
-  padding-bottom: 33px;
+  padding-bottom: 30px;
 
   font-style: normal;
   font-size: 35px;
@@ -59,6 +61,9 @@ h2 {
 .site-wrapper {
   background-repeat: no-repeat;
   background-position: top center;
+
+  -webkit-transition: background-image 0.5s ease,
+              background-color 0.5s ease;
 
   transition: background-image 0.5s ease,
               background-color 0.5s ease;
@@ -89,19 +94,21 @@ h2 {
   min-height: 120px;
   padding-right: 2.3%;
   padding-left: 2.3%;
-  margin-bottom: 10px;
 }
 
 .logo-area {
   width: 154px;
-  height: 64px;
+  min-height: 64px;
   padding-top: 10px;
   margin-right: 15px;
+  margin-left: -5px;
+  margin-bottom: -10px;
   float: left;
 }
 
 .header-menu {
   float: left;
+  max-width: 420px;
   padding-top: 23px;
 }
 
@@ -119,14 +126,15 @@ h2 {
 .menu-level-1 > li {
   position: relative;
   display: inline-block;
+  padding-bottom: 5px;
 
   vertical-align: top;
 }
 
 .menu-level-1 > li > a {
   display: block;
-  padding: 6px 14px;
-  margin-bottom: 5px;
+  min-height: 28px;
+  padding: 5px 14px 0;
 
   font-weight: 700;
   font-size: 16px;
@@ -222,7 +230,7 @@ input[type="email"],
 input[type="password"],
 textarea {
   display: block;
-  height: 44px;
+  min-height: 44px;
   width: 267px;
   padding: 11px 9px;
   border: 1px solid #d2d2d1;
@@ -313,7 +321,7 @@ textarea:focus {
 .btn-normal {
   display: block;
   min-width: 102px;
-  height: 44px;
+  min-height: 44px;
   padding: 0;
 
   font-size: 18px;
@@ -359,7 +367,7 @@ textarea:focus {
   position: relative;
 
   display: inline-block;
-  height: 42px;
+  min-height: 42px;
 
   vertical-align: top;
 }
@@ -374,7 +382,7 @@ textarea:focus {
   cursor: pointer;
 
   display: block;
-  height: 32px;
+  min-height: 32px;
   padding: 0;
 
   font-size: 14px;
@@ -492,7 +500,7 @@ textarea:focus {
   color: #333333;
 }
 
-.cart-table ul {
+.cart-table .cart-row {
   display: table-row;
   height: 53px;
 }
@@ -565,7 +573,7 @@ textarea:focus {
 
 .cart-total .btn-normal {
   float: right;
-  height: 35px;
+  min-height: 35px;
   padding: 0 23px;
 
   font-size: 15px;
@@ -609,7 +617,7 @@ textarea:focus {
 
 .login-form button {
   width: 102px;
-  height: 35px;
+  min-height: 35px;
   display: block;
   float: left;
 
@@ -649,17 +657,20 @@ textarea:focus {
   margin-top: 0px;
 
   text-align: right;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
 }
 
 .header-contact-info span {
   font-size: 22px;
-  font-weight: bold;
+  line-height: 32px;
 }
 
 .breadcrumbs {
   float: left;
-  height: 14px;
+  min-width: 100px;
+  min-height: 14px;
   margin-top: 28px;
 
   font-size: 0;
@@ -669,7 +680,7 @@ textarea:focus {
   position: relative;
 
   display: inline-block;
-  height: 17px;
+  min-height: 17px;
   padding-right: 22px;
 
   vertical-align: middle;
@@ -722,14 +733,14 @@ textarea:focus {
   position: relative;
 
   width: 95.4%;
-  min-height: 500px;
+  min-height: 400px;
   padding: 0 2.3%;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .slide {
   display: none;
-  padding-top: 285px;
+  padding-top: 263px;
 
   text-align: center;
 }
@@ -745,16 +756,20 @@ textarea:focus {
 }
 
 .slide-btn {
-  width: 279px;
-  height: 64px;
+  display: block;
+  width: 285px;
+  min-height: 64px;
   padding: 0;
+  margin: 0 auto;
 
   font-size: 31.48px;
   font-weight: 700;
+  line-height: 64px;
   text-align: center;
   vertical-align: middle;
 
   color: #ffffff;
+  text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
   background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
@@ -780,7 +795,7 @@ textarea:focus {
 
 .slider-controls {
   position: absolute;
-  bottom: 25px;
+  bottom: 22px;
   left: 2.3%;
   z-index: 10;
 
@@ -790,7 +805,7 @@ textarea:focus {
 .slider-controls label {
   display: inline-block;
   width: 17px;
-  height: 17px;
+  min-height: 17px;
   margin-right: 8px;
 
   vertical-align: top;
@@ -843,15 +858,18 @@ textarea:focus {
 
   float: left;
   width: 46.6%;
-  min-height: 220px;
-  padding: 20px;
   box-sizing: border-box;
 
   border-radius: 15px;
 }
 
+.promo {
+  min-height: 230px;
+  padding: 16px 18px;
+}
+
 .promo h2 {
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 
   font-size: 35px;
   line-height: 41px;
@@ -864,7 +882,7 @@ textarea:focus {
   margin-bottom: 70px;
 
   font-size: 18px;
-  line-height: 24px;
+  line-height: 22px;
   font-weight: 700;
 
   color: #ffffff;
@@ -886,8 +904,8 @@ textarea:focus {
 
 .btn-promo {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 21px;
 
   min-width: 100px;
   padding: 0 23px;
@@ -909,7 +927,7 @@ textarea:focus {
   width: 22.2%;
   min-height: 250px;
   margin-right: 2.2%;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   text-align: center;
 }
@@ -932,7 +950,7 @@ textarea:focus {
 
   width: 100%;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 7px;
 }
 
 .hits-item .item-img::before {
@@ -955,11 +973,11 @@ textarea:focus {
 
 .item-price {
   position: absolute;
-  top: 75%;
+  top: 78%;
   left: 0;
 
   display: block;
-  height: 45px;
+  min-height: 45px;
 
   font-size: 30px;
   font-weight: 700;
@@ -968,7 +986,7 @@ textarea:focus {
 }
 
 .item-price span {
-  height: 45px;
+  min-height: 45px;
 }
 
 .price-number {
@@ -980,8 +998,8 @@ textarea:focus {
 
   display: inline-block;
   vertical-align: middle;
-  width: 32px;
-  height: 45px;
+  width: 34px;
+  height: 44px;
 }
 
 .item-img img {
@@ -991,10 +1009,12 @@ textarea:focus {
 
 .item-name {
   position: relative;
+
+  padding: 0 5px;
 }
 
 .item-name  a {
-  padding: 0 5px;
+  padding: 0;
 
   font-size: 16px;
   line-height: 22px;
@@ -1031,9 +1051,11 @@ textarea:focus {
   bottom: 22px;
   left: 15px;
 
-  font-size: 15px;
-
   width: calc(100% - 30px);
+  min-height: 35px;
+
+  font-size: 15px;
+  line-height: 35px;
 }
 
 .catalog-item:hover .item-hover {
@@ -1057,7 +1079,7 @@ textarea:focus {
 .features {
   width: 95.4%;
   min-height: 200px;
-  padding: 30px 20px;
+  padding: 25px 19px;
   margin: 0 2.3% 40px;
   box-sizing: border-box;
 
@@ -1082,7 +1104,7 @@ textarea:focus {
   float: left;
   width: 48.865%;
   padding-left: 57px;
-  padding-top: 15px;
+  padding-top: 11px;
   margin-top: 10px;
   box-sizing: border-box;
 
@@ -1098,7 +1120,7 @@ textarea:focus {
 
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1px;
 
   width: 47px;
   height: 47px;
@@ -1135,13 +1157,18 @@ textarea:focus {
   margin-right: 2.27%;
 }
 
+.blog {
+  min-height: 220px;
+  padding: 23px 19px;
+}
+
 .blog-news {
   width: 300px;
   min-width: 90px;
 }
 
 .blog-news h2 {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1159,6 +1186,17 @@ textarea:focus {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.blog-news a:hover,
+.blog-news a:active {
+  color: #ec593c;
+  /*border-bottom: 1px solid rgba(236, 89, 60, 0.3);*/
+}
+
+.subscribe-border {
+  min-height: 220px;
+  padding: 23px 19px;
+}
+
 .subscribe-border {
   padding: 5px;
 
@@ -1173,7 +1211,7 @@ textarea:focus {
 
   width: 100%;
   min-height: 210px;
-  padding: 30px 21px 35px;
+  padding: 24px 17px 35px;
   box-sizing: border-box;
 
   background-color: #f8f7f4;
@@ -1182,6 +1220,8 @@ textarea:focus {
 }
 
 .subscribe p {
+  margin-bottom: 50px;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -1191,20 +1231,20 @@ textarea:focus {
 
 .subscribe input[type="email"] {
   position: absolute;
-  bottom: 35px;
-  left: 21px;
+  bottom: 30px;
+  left: 16px;
 
-  width: calc(100% - 182px);
-  height: 44px;
+  width: calc(100% - 171px);
+  min-height: 44px;
 }
 
 .subscribe button[type="submit"] {
   position: absolute;
-  bottom: 35px;
-  right: 21px;
+  bottom: 31px;
+  right: 15px;
 
   width: 130px;
-  height: 44px;
+  min-height: 44px;
   padding: 0;
 
   font-size: 17px;
@@ -1217,18 +1257,15 @@ textarea:focus {
 }
 
 .catalog-filter {
-  margin-bottom: 38px;
+  margin-bottom: 26px;
 
   font-size: 0;
 }
 
-.catalog-filter-row {
-  margin-bottom: 18px;
-}
-
 .filter-control {
   display: inline-block;
-  margin-right: 12px;
+  margin-bottom: 14px;
+  margin-right: 10px;
   box-sizing: border-box;
 
   vertical-align: bottom;
@@ -1241,7 +1278,7 @@ textarea:focus {
 }
 
 .filter-control p {
-  padding-left: 20px;
+  padding-left: 16px;
   margin-bottom: 9px;
 
   font-size: 14px;
@@ -1250,9 +1287,9 @@ textarea:focus {
 }
 
 .filter-sorting select {
-  width: 191px;
-  height: 36px;
-  padding: 0 14px;
+  width: 193px;
+  min-height: 36px;
+  padding: 0 11px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1285,7 +1322,7 @@ textarea:focus {
 
 .price-toggle {
   position: absolute;
-  top: 8px;
+  top: 7px;
 
   width: 20px;
   height: 20px;
@@ -1294,14 +1331,15 @@ textarea:focus {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transform: translatex(-50%);
 }
 
 .price-scale {
   position: absolute;
-  top: 16px;
-  left: 14px;
+  top: 15px;
+  left: 16px;
 
-  width: 186px;
+  width: 187px;
   height: 4px;
 
   background-color: rgba(247, 247, 244, 0.5);
@@ -1319,11 +1357,18 @@ textarea:focus {
 }
 
 .price-min {
-  left: 34px;
+  left: 46px;
 }
 
 .price-max {
-  left: 133px;
+  left: 143px;
+}
+
+.price-toggle:hover {
+  -webkit-transform: translatex(-50%)
+                     scale(1.35);
+          transform: translatex(-50%)
+                     scale(1.35);
 }
 
 .filter-fat-content {
@@ -1332,7 +1377,7 @@ textarea:focus {
 
 .input-fieldset {
   min-width: 370px;
-  height: 36px;
+  min-height: 36px;
   padding: 0 14px;
 
   border-radius: 18px;
@@ -1348,7 +1393,8 @@ textarea:focus {
   position: relative;
 
   display: inline-block;
-  padding-left: 25px;
+  padding-left: 31px;
+  vertical-align: middle;
 
   font-size: 16px;
   font-weight: 500;
@@ -1356,8 +1402,13 @@ textarea:focus {
   cursor: pointer;
 }
 
+.input-fieldset input[type="radio"]:disabled,
+.input-fieldset input[type="checkbox"]:disabled {
+  color: #b6c0b7;
+}
+
 .input-fieldset label:not(:last-child) {
-  margin-right: 13px;
+  margin-right: 14px;
 }
 
 .input-fieldset label:before {
@@ -1375,77 +1426,57 @@ textarea:focus {
   background-position: center;
 }
 
-#filter-radio-1 ~ label[for="filter-radio-1"]:before,
-#filter-radio-2 ~ label[for="filter-radio-2"]:before,
-#filter-radio-3 ~ label[for="filter-radio-3"]:before,
-#filter-radio-4 ~ label[for="filter-radio-4"]:before {
+input[type="radio"] + label:before {
   background-image: url("../img/controll-radiobutton-off.svg");
 }
 
-#filter-radio-1 ~ label[for="filter-radio-1"]:hover:before,
-#filter-radio-2 ~ label[for="filter-radio-2"]:hover:before,
-#filter-radio-3 ~ label[for="filter-radio-3"]:hover:before,
-#filter-radio-4 ~ label[for="filter-radio-4"]:hover:before {
+input[type="radio"] + label:hover:before {
   background-image: url("../img/controll-radiobutton-off-hover.svg");
 }
 
-#filter-radio-1:checked ~ label[for="filter-radio-1"]:before,
-#filter-radio-2:checked ~ label[for="filter-radio-2"]:before,
-#filter-radio-3:checked ~ label[for="filter-radio-3"]:before,
-#filter-radio-4:checked ~ label[for="filter-radio-4"]:before {
+input[type="radio"]:checked + label:before {
   background-image: url("../img/controll-radiobutton-on.svg");
 }
 
-#filter-radio-1:checked ~ label[for="filter-radio-1"]:hover:before,
-#filter-radio-2:checked ~ label[for="filter-radio-2"]:hover:before,
-#filter-radio-3:checked ~ label[for="filter-radio-3"]:hover:before,
-#filter-radio-4:checked ~ label[for="filter-radio-4"]:hover:before {
+input[type="radio"]:checked + label:hover:before {
   background-image: url("../img/controll-radiobutton-on-hover.svg");
 }
 
-#filter-checkbox-1 ~ label[for="filter-checkbox-1"]:before,
-#filter-checkbox-2 ~ label[for="filter-checkbox-2"]:before,
-#filter-checkbox-3 ~ label[for="filter-checkbox-3"]:before,
-#filter-checkbox-4 ~ label[for="filter-checkbox-4"]:before,
-#filter-checkbox-5 ~ label[for="filter-checkbox-5"]:before {
+input[type="radio"]:disabled + label:before {
+  background-image: url("../img/controll-radiobutton-on-disabled.svg");
+}
+
+input[type="radio"]:checked:disabled + label:before {
+  background-image: url("../img/controll-radiobutton-on-disabled.svg");
+}
+
+input[type="checkbox"] + label:before {
   background-image: url("../img/controll-checkbox-off.svg");
 }
 
-#filter-checkbox-1 ~ label[for="filter-checkbox-1"]:hover:before,
-#filter-checkbox-2 ~ label[for="filter-checkbox-2"]:hover:before,
-#filter-checkbox-3 ~ label[for="filter-checkbox-3"]:hover:before,
-#filter-checkbox-4 ~ label[for="filter-checkbox-4"]:hover:before,
-#filter-checkbox-5 ~ label[for="filter-checkbox-5"]:hover:before {
+input[type="checkbox"] + label:hover:before {
   background-image: url("../img/controll-checkbox-off-hover.svg");
 }
 
-#filter-checkbox-1:checked ~ label[for="filter-checkbox-1"]:before,
-#filter-checkbox-2:checked ~ label[for="filter-checkbox-2"]:before,
-#filter-checkbox-3:checked ~ label[for="filter-checkbox-3"]:before,
-#filter-checkbox-4:checked ~ label[for="filter-checkbox-4"]:before,
-#filter-checkbox-5:checked ~ label[for="filter-checkbox-5"]:before {
+input[type="checkbox"]:checked + label:before {
   background-image: url("../img/controll-checkbox-on.svg");
 }
 
-#filter-checkbox-1:checked ~ label[for="filter-checkbox-1"]:hover:before,
-#filter-checkbox-2:checked ~ label[for="filter-checkbox-2"]:hover:before,
-#filter-checkbox-3:checked ~ label[for="filter-checkbox-3"]:hover:before,
-#filter-checkbox-4:checked ~ label[for="filter-checkbox-4"]:hover:before,
-#filter-checkbox-5:checked ~ label[for="filter-checkbox-5"]:hover:before {
+input[type="checkbox"]:checked + label:hover:before {
   background-image: url("../img/controll-checkbox-on-hover.svg");
 }
 
-.filter-fillers label:before {
-  background-image: url("../img/controll-checkbox-off.svg");
+input[type="checkbox"]:checked:disabled + label:before {
+  background-image: url("../img/controll-checkbox-on-disabled.svg");
 }
 
-.filter-fat-content input[type="radio"]:checked .filter-fat-content label:before {
-  background-image: url("../img/controll-radiobutton-on.svg");
+input[type="checkbox"]:disabled + label:before {
+  background-image: url("../img/controll-checkbox-off-disabled.svg");
 }
 
 .catalog-filter button[type="submit"] {
-  width: 175px;
-  height: 36px;
+  width: 144px;
+  min-height: 36px;
   margin-right: 0;
   box-sizing: border-box;
 
@@ -1469,6 +1500,9 @@ textarea:focus {
 }
 
 .map {
+  position: relative;
+  z-index: 5;
+
   width: 100%;
   min-height: 429px;
 
@@ -1478,11 +1512,14 @@ textarea:focus {
   background-position: 50% 0;
 }
 
-.map .contact-info {
+.contact-info {
+  position: relative;
+  z-index: 10;
+
   float: right;
   width: 302px;
   min-height: 305px;
-  padding: 30px 25px;
+  padding: 28px 25px;
   margin-top: 65px;
   margin-right: 2.3%;
   box-sizing: border-box;
@@ -1498,6 +1535,15 @@ textarea:focus {
   text-align: left;
 }
 
+.contact-info div {
+  min-height: 15px;
+}
+
+.address-title {
+  width: 180px;
+  margin-bottom: 2px;
+}
+
 .contact-info .contact-address,
 .contact-info .contact-phone {
   font-size: 18px;
@@ -1505,12 +1551,12 @@ textarea:focus {
   line-height: 24px;
 }
 
-.contact-info span {
-  display: inline-block;
+.phone-title {
+  margin-bottom: 6px;
 }
 
 .contact-info .contact-address {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .contact-info .contact-phone,
@@ -1519,14 +1565,12 @@ textarea:focus {
 }
 
 .contact-info .contact-mode {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 }
-
-
 
 .catalog-paginator {
   float: right;
-  margin: 40px 0 30px;
+  margin: 45px 0 39px;
 
   font-size: 0;
 }
@@ -1688,11 +1732,11 @@ textarea:focus {
 }
 
 .social a:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
 .links-col {
-  margin-top: 20px;
+  margin-top: 18px;
   min-height: 36px;
   padding-left: 22px;
   margin-right: 10px;
@@ -1742,11 +1786,15 @@ textarea:focus {
 .links-col-left {
   float: right;
   width: 120px;
+  margin-right: 30px;
 }
 
 .links-col-right {
   float: left;
   width: 185px;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: -8px;
 }
 
 .copyright {
@@ -1799,7 +1847,7 @@ textarea:focus {
   z-index: 30;
 
   display: none;
-  width: 430px;
+  min-width: 430px;
   min-height: 400px;
   padding: 21px 24px;
 
@@ -1807,7 +1855,8 @@ textarea:focus {
   background-color: #f7f7f4;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .overlay-show {
@@ -1816,7 +1865,8 @@ textarea:focus {
 
 .feedback-form-show {
   display: block;
-  animation: bounce 1s;
+  -webkit-animation: bounce 1s;
+          animation: bounce 1s;
 }
 
 .feedback-form p {
@@ -1856,27 +1906,76 @@ textarea:focus {
   background: transparent url("../img/btn-close.svg") no-repeat center;
 }
 
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate(calc(-50% - 10px), -50%);
+            transform: translate(calc(-50% - 10px), -50%);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate(calc(-50% + 10px), -50%);
+            transform: translate(calc(-50% + 10px), -50%);
+  }
+}
 @keyframes shake {
-  0%, 100% { transform: translate(-50%, -50%); }
-  10%, 30%, 50%, 70%, 90% { transform: translate(calc(-50% - 10px), -50%); }
-  20%, 40%, 60%, 80% { transform: translate(calc(-50% + 10px), -50%); }
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate(calc(-50% - 10px), -50%);
+            transform: translate(calc(-50% - 10px), -50%);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate(calc(-50% + 10px), -50%);
+            transform: translate(calc(-50% + 10px), -50%);
+  }
 }
 
 .feedback-error {
   animation: shake 1s;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0%   {
-    transform: translate(-50%, -2000px);
+    -webkit-transform: translate(-50%, -2000px);
+            transform: translate(-50%, -2000px);
   }
   70%  {
-    transform: translate(-50%, calc(-50% + 30px));
+    -webkit-transform: translate(-50%, calc(-50% + 30px));
+            transform: translate(-50%, calc(-50% + 30px));
   }
   90%  {
-    transform: translate(-50%, calc(-50% - 10px));
+    -webkit-transform: translate(-50%, calc(-50% - 10px));
+            transform: translate(-50%, calc(-50% - 10px));
   }
   100% {
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+@keyframes bounce {
+  0%   {
+    -webkit-transform: translate(-50%, -2000px);
+            transform: translate(-50%, -2000px);
+  }
+  70%  {
+    -webkit-transform: translate(-50%, calc(-50% + 30px));
+            transform: translate(-50%, calc(-50% + 30px));
+  }
+  90%  {
+    -webkit-transform: translate(-50%, calc(-50% - 10px));
+            transform: translate(-50%, calc(-50% - 10px));
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
