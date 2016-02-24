@@ -1269,6 +1269,10 @@ textarea:focus {
   font-size: 0;
 }
 
+.catalog-filter-row {
+  min-width: 870px; 
+}
+
 .filter-control {
   display: inline-block;
   margin-bottom: 14px;
@@ -1295,7 +1299,7 @@ textarea:focus {
 
 .filter-sorting select {
   width: 193px;
-  min-height: 36px;
+  height: 36px;
   padding: 5px 11px;
 
   font-size: 16px;
@@ -1434,7 +1438,7 @@ textarea:focus {
 }
 
 .filter-fillers .input-fieldset {
-  padding-right: 17px;
+  padding-right: 16px;
 }
 
 .filter-fillers label {
